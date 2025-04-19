@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -226,6 +226,72 @@
         font-size: 12px;
       }
     }
+
+    /* Styles pour le floutage et le bouton */
+    .blur-section {
+      position: relative;
+      overflow: hidden;
+      max-height: 200px; /* Hauteur pour afficher environ 3 lignes */
+      margin-bottom: 20px;
+    }
+
+    .blur-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,1) 100%);
+      z-index: 1;
+    }
+
+    .blur-content {
+      filter: blur(3px);
+      transition: filter 0.3s ease;
+    }
+
+    .hidden-content {
+      display: none;
+    }
+
+    /* Styles pour le bouton */
+    .continue-button {
+      display: block;
+      margin: 30px auto;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      background-size: 400% 400%;
+      color: white;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      animation: rainbow 8s linear infinite;
+      transition: all 0.3s ease;
+    }
+
+    .continue-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+    }
+
+    .continue-button:active {
+      transform: translateY(1px);
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 400% 50%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -235,75 +301,111 @@
       <h1>🔥 10 raisons pour lesquelles vous devriez arrêter de dormir avec votre téléphone près de vous (la n°7 va vous surprendre)</h1>
       
       <!-- IMAGE AJOUTÉE ICI -->
-      <img src="philippe.jpg" alt="Illustration des dangers du téléphone la nuit" class="image-principale">
+      <img src="philippe.jpeg" alt="Illustration des dangers du téléphone la nuit" class="image-principale">
       <h3><strong>1️⃣ Il perturbe gravement la qualité de ton sommeil</strong></h3>
       <p>On en parle souvent, mais l'impact des téléphones sur le sommeil est énorme.</p>
-      <p><strong>📱 Le problème :</strong> Ton téléphone émet une lumière bleue qui perturbe la production de mélatonine, l'hormone qui régule ton sommeil. En gros, quand tu regardes un écran avant de dormir, ton cerveau pense qu'il fait encore jour et bloque la sécrétion de mélatonine, ce qui empêche un endormissement naturel.</p>
-      <p><strong>💡 Exemple concret :</strong> Imagine que tu es fatigué(e) mais que tu scrolles sur Instagram ou TikTok avant de fermer les yeux. Résultat ? Tu mets plus de temps à t'endormir, ton sommeil est moins profond, et tu te réveilles fatigué(e), même après 8 heures de sommeil.</p>
-      <p><strong>🔹 Solution :</strong> Évite les écrans au moins 30 à 60 minutes avant de dormir. Préfère une activité relaxante comme lire un livre, écouter de la musique douce ou écrire dans un journal.</p>
+      
+      <!-- Début de la section à flouter -->
+      <div class="blur-section" id="blurSection">
+        <div class="blur-overlay"></div>
+        <div class="blur-content" id="blurContent">
+          <p><strong>📱 Le problème :</strong> Ton téléphone émet une lumière bleue qui perturbe la production de mélatonine, l'hormone qui régule ton sommeil. En gros, quand tu regardes un écran avant de dormir, ton cerveau pense qu'il fait encore jour et bloque la sécrétion de mélatonine, ce qui empêche un endormissement naturel.</p>
+          <p><strong>💡 Exemple concret :</strong> Imagine que tu es fatigué(e) mais que tu scrolles sur Instagram ou TikTok avant de fermer les yeux. Résultat ? Tu mets plus de temps à t'endormir, ton sommeil est moins profond, et tu te réveilles fatigué(e), même après 8 heures de sommeil.</p>
+        </div>
+      </div>
+      
+      <button class="continue-button" id="continueButton">Continuer la lecture</button>
+      
+      <!-- Contenu caché initialement -->
+      <div id="hiddenContent" class="hidden-content">
+          <p><strong>🔹 Solution :</strong> Évite les écrans au moins 30 à 60 minutes avant de dormir. Préfère une activité relaxante comme lire un livre, écouter de la musique douce ou écrire dans un journal.</p>
 
-      <h3><strong>2️⃣ Les ondes qu'il émet ne sont pas si inoffensives</strong></h3>
-      <p><strong>📱 Le problème :</strong> Bien que les études ne soient pas unanimes, certaines recherches suggèrent un lien entre une exposition prolongée aux ondes et des risques neurologiques ou un potentiel développement de tumeurs à long terme.</p>
-      <p><strong>💡 Cas réel :</strong> En 2011, l'OMS a classé les radiofréquences émises par les téléphones comme possiblement cancérigènes. Certains scientifiques militent pour plus de précautions, notamment en réduisant l'exposition la nuit.</p>
-      <p><strong>🔹 Précaution simple :</strong> Pose ton téléphone loin de ton lit et privilégie le mode avion la nuit pour limiter l'exposition.</p>
+          <h3><strong>2️⃣ Les ondes qu'il émet ne sont pas si inoffensives</strong></h3>
+          <p><strong>📱 Le problème :</strong> Bien que les études ne soient pas unanimes, certaines recherches suggèrent un lien entre une exposition prolongée aux ondes et des risques neurologiques ou un potentiel développement de tumeurs à long terme.</p>
+          <p><strong>💡 Cas réel :</strong> En 2011, l'OMS a classé les radiofréquences émises par les téléphones comme possiblement cancérigènes. Certains scientifiques militent pour plus de précautions, notamment en réduisant l'exposition la nuit.</p>
+          <p><strong>🔹 Précaution simple :</strong> Pose ton téléphone loin de ton lit et privilégie le mode avion la nuit pour limiter l'exposition.</p>
 
-      <h3><strong>3️⃣ Il te maintient en état d'alerte, même inconscient(e)</strong></h3>
-      <p><strong>📱 Le problème :</strong> Même si ton téléphone est en silencieux, ton cerveau reste attentif. Il est prêt à réagir à une notification, un appel ou une vibration, ce qui limite la profondeur du sommeil.</p>
-      <p><strong>💡 Expérience fréquente :</strong> Si tu dors avec ton téléphone sur la table de nuit et que tu reçois un message à 3h du matin, même si tu ne le consultes pas, ton sommeil est interrompu car ton cerveau l'a perçu.</p>
-      <p><strong>🔹 Conseil utile :</strong> Éloigne ton téléphone de ta chambre et utilise un réveil classique au lieu de l'alarme du téléphone.</p>
+          <h3><strong>3️⃣ Il te maintient en état d'alerte, même inconscient(e)</strong></h3>
+          <p><strong>📱 Le problème :</strong> Même si ton téléphone est en silencieux, ton cerveau reste attentif. Il est prêt à réagir à une notification, un appel ou une vibration, ce qui limite la profondeur du sommeil.</p>
+          <p><strong>💡 Expérience fréquente :</strong> Si tu dors avec ton téléphone sur la table de nuit et que tu reçois un message à 3h du matin, même si tu ne le consultes pas, ton sommeil est interrompu car ton cerveau l'a perçu.</p>
+          <p><strong>🔹 Conseil utile :</strong> Éloigne ton téléphone de ta chambre et utilise un réveil classique au lieu de l'alarme du téléphone.</p>
 
-      <h3><strong>4️⃣ Tu te réveilles plus fatigué(e) qu'avant de dormir</strong></h3>
-      <p><strong>📱 Le problème :</strong> Le cycle de sommeil doit être complet et réparateur. Mais si ton dernier et premier réflexe est de consulter ton téléphone, ton cerveau ne coupe jamais réellement.</p>
-      <p><strong>💡 Exemple concret :</strong> Regarder ses mails ou les réseaux sociaux dès le matin augmente le stress, réduit ta concentration et vole tes premières minutes de clarté mentale.</p>
-      <p><strong>🔹 Alternative :</strong> Essaie une routine matinale sans écran pendant 15 minutes. Respire, bois un verre d'eau, fais quelques étirements avant de plonger dans le digital.</p>
+          <h3><strong>4️⃣ Tu te réveilles plus fatigué(e) qu'avant de dormir</strong></h3>
+          <p><strong>📱 Le problème :</strong> Le cycle de sommeil doit être complet et réparateur. Mais si ton dernier et premier réflexe est de consulter ton téléphone, ton cerveau ne coupe jamais réellement.</p>
+          <p><strong>💡 Exemple concret :</strong> Regarder ses mails ou les réseaux sociaux dès le matin augmente le stress, réduit ta concentration et vole tes premières minutes de clarté mentale.</p>
+          <p><strong>🔹 Alternative :</strong> Essaie une routine matinale sans écran pendant 15 minutes. Respire, bois un verre d'eau, fais quelques étirements avant de plonger dans le digital.</p>
 
-      <h3><strong>5️⃣ Il favorise l'anxiété et les pensées négatives nocturnes</strong></h3>
-      <p><strong>📱 Le problème :</strong> Lire des informations négatives avant de dormir stimule le stress, ce qui retarde l'endormissement et favorise les réveils nocturnes.</p>
-      <p><strong>💡 Exemple :</strong> Si tu scrolles sur Twitter avant de dormir et que tu tombes sur des news inquiétantes, ton cerveau rumine et t'empêche de dormir sereinement.</p>
-      <p><strong>🔹 Solution :</strong> Fixe-toi une règle stricte : pas de téléphone après 22h. À la place, pratique une activité apaisante comme la méditation ou la lecture.</p>
+          <h3><strong>5️⃣ Il favorise l'anxiété et les pensées négatives nocturnes</strong></h3>
+          <p><strong>📱 Le problème :</strong> Lire des informations négatives avant de dormir stimule le stress, ce qui retarde l'endormissement et favorise les réveils nocturnes.</p>
+          <p><strong>💡 Exemple :</strong> Si tu scrolles sur Twitter avant de dormir et que tu tombes sur des news inquiétantes, ton cerveau rumine et t'empêche de dormir sereinement.</p>
+          <p><strong>🔹 Solution :</strong> Fixe-toi une règle stricte : pas de téléphone après 22h. À la place, pratique une activité apaisante comme la méditation ou la lecture.</p>
 
-      <h3><strong>6️⃣ Le simple fait de l'avoir à portée de main augmente le stress</strong></h3>
-      <p><strong>📱 Le problème :</strong> Psychologiquement, savoir que ton téléphone est proche empêche une véritable coupure mentale. Même si tu ne l'utilises pas, sa seule présence peut maintenir un état de vigilance inconscient, augmentant le stress et empêchant une relaxation totale.</p>
-      <p><strong>💡 Expérience personnelle :</strong> Essaye de laisser ton téléphone hors de ta chambre pendant 3 nuits et observe la différence sur ton sommeil et ton niveau de stress. Tu pourrais remarquer un endormissement plus rapide et une sensation de repos plus profond.</p>
-      <p><strong>🔹 Technique :</strong> Place ton téléphone dans une autre pièce ou, au minimum, éloigne-le de ton lit pour éviter toute tentation de le consulter dès le réveil ou pendant la nuit.</p>
+          <h3><strong>6️⃣ Le simple fait de l'avoir à portée de main augmente le stress</strong></h3>
+          <p><strong>📱 Le problème :</strong> Psychologiquement, savoir que ton téléphone est proche empêche une véritable coupure mentale. Même si tu ne l'utilises pas, sa seule présence peut maintenir un état de vigilance inconscient, augmentant le stress et empêchant une relaxation totale.</p>
+          <p><strong>💡 Expérience personnelle :</strong> Essaye de laisser ton téléphone hors de ta chambre pendant 3 nuits et observe la différence sur ton sommeil et ton niveau de stress. Tu pourrais remarquer un endormissement plus rapide et une sensation de repos plus profond.</p>
+          <p><strong>🔹 Technique :</strong> Place ton téléphone dans une autre pièce ou, au minimum, éloigne-le de ton lit pour éviter toute tentation de le consulter dès le réveil ou pendant la nuit.</p>
 
-      <h3><strong>7️⃣ Il pourrait littéralement exploser sous ton oreiller</strong></h3>
-      <p><strong>📱 Le problème :</strong> Les batteries des téléphones génèrent de la chaleur pendant la charge. Si le téléphone est recouvert, la chaleur ne peut pas se dissiper correctement, augmentant le risque de surchauffe et, dans les cas extrêmes, d'incendie.</p>
-      <p><strong>💡 Cas réel :</strong> Plusieurs incidents ont été signalés où des téléphones mal ventilés ont provoqué des départs de feu dans des chambres. Certains utilisateurs ont subi des brûlures ou ont perdu leurs biens à cause d'un simple oubli.</p>
-      <p><strong>🔹 Précaution :</strong> Toujours charger ton téléphone sur une surface dure et bien ventilée, jamais sous un coussin ou un oreiller. Idéalement, utilise un chargeur officiel adapté à ton appareil pour éviter les surchauffes liées à des accessoires de mauvaise qualité.</p>
+          <h3><strong>7️⃣ Il pourrait littéralement exploser sous ton oreiller</strong></h3>
+          <p><strong>📱 Le problème :</strong> Les batteries des téléphones génèrent de la chaleur pendant la charge. Si le téléphone est recouvert, la chaleur ne peut pas se dissiper correctement, augmentant le risque de surchauffe et, dans les cas extrêmes, d'incendie.</p>
+          <p><strong>💡 Cas réel :</strong> Plusieurs incidents ont été signalés où des téléphones mal ventilés ont provoqué des départs de feu dans des chambres. Certains utilisateurs ont subi des brûlures ou ont perdu leurs biens à cause d'un simple oubli.</p>
+          <p><strong>🔹 Précaution :</strong> Toujours charger ton téléphone sur une surface dure et bien ventilée, jamais sous un coussin ou un oreiller. Idéalement, utilise un chargeur officiel adapté à ton appareil pour éviter les surchauffes liées à des accessoires de mauvaise qualité.</p>
 
-      <h3><strong>8️⃣ Tu deviens dépendant(e) sans t'en rendre compte</strong></h3>
-      <p><strong>📱 Le problème :</strong> Ton cerveau associe la nuit à une possible distraction numérique. Chaque notification, chaque écran allumé interrompt ton processus de relaxation et crée une habitude inconsciente de vérification du téléphone, même sans nécessité.</p>
-      <p><strong>🔹 Solution :</strong> Mets en place des routines sans écran avant de dormir. Par exemple :</p>
-      <ul>
-          <li>Lire un livre ou écouter un podcast apaisant</li>
-          <li>Pratiquer des exercices de respiration ou de méditation</li>
-          <li>Écrire tes pensées dans un journal pour clarifier ton esprit</li>
-      </ul>
-      <p>Ces habitudes permettent une meilleure transition vers le sommeil et aident ton cerveau à comprendre que la nuit est un moment de repos, non de connexion.</p>
+          <h3><strong>8️⃣ Tu deviens dépendant(e) sans t'en rendre compte</strong></h3>
+          <p><strong>📱 Le problème :</strong> Ton cerveau associe la nuit à une possible distraction numérique. Chaque notification, chaque écran allumé interrompt ton processus de relaxation et crée une habitude inconsciente de vérification du téléphone, même sans nécessité.</p>
+          <p><strong>🔹 Solution :</strong> Mets en place des routines sans écran avant de dormir. Par exemple :</p>
+          <ul>
+              <li>Lire un livre ou écouter un podcast apaisant</li>
+              <li>Pratiquer des exercices de respiration ou de méditation</li>
+              <li>Écrire tes pensées dans un journal pour clarifier ton esprit</li>
+          </ul>
+          <p>Ces habitudes permettent une meilleure transition vers le sommeil et aident ton cerveau à comprendre que la nuit est un moment de repos, non de connexion.</p>
 
-      <h3><strong>9️⃣ Il ralentit ton cerveau à long terme</strong></h3>
-      <p><strong>📱 Le problème :</strong> L'exposition prolongée aux écrans, surtout avant de dormir, est associée à une diminution des capacités cognitives sur le long terme. La lumière bleue émise par les téléphones perturbe la production de mélatonine, l'hormone du sommeil, affectant non seulement ta récupération mais aussi tes fonctions cérébrales.</p>
-      <p><strong>💡 Alternative :</strong> Remplace l'écran par des activités qui stimulent positivement ton cerveau :</p>
-      <ul>
-          <li>Jeux de logique ou puzzles</li>
-          <li>Écriture ou dessin</li>
-          <li>Conversation avec un proche</li>
-      </ul>
-      <p>Ces activités favorisent une meilleure stimulation intellectuelle sans les effets négatifs des écrans.</p>
+          <h3><strong>9️⃣ Il ralentit ton cerveau à long terme</strong></h3>
+          <p><strong>📱 Le problème :</strong> L'exposition prolongée aux écrans, surtout avant de dormir, est associée à une diminution des capacités cognitives sur le long terme. La lumière bleue émise par les téléphones perturbe la production de mélatonine, l'hormone du sommeil, affectant non seulement ta récupération mais aussi tes fonctions cérébrales.</p>
+          <p><strong>💡 Alternative :</strong> Remplace l'écran par des activités qui stimulent positivement ton cerveau :</p>
+          <ul>
+              <li>Jeux de logique ou puzzles</li>
+              <li>Écriture ou dessin</li>
+              <li>Conversation avec un proche</li>
+          </ul>
+          <p>Ces activités favorisent une meilleure stimulation intellectuelle sans les effets négatifs des écrans.</p>
 
-      <h3><strong>🔟 Il vole ton attention dès le réveil</strong></h3>
-      <p><strong>📱 Le problème :</strong> Dès que tu allumes ton téléphone le matin, tu es bombardé(e) de notifications, e-mails et messages. Cet afflux d'informations déclenche immédiatement une réponse de stress et détourne ton attention des premiers instants de ta journée.</p>
-      <p><strong>🔹 Astuce :</strong> Accorde-toi un moment sans téléphone au réveil pour bien démarrer ta journée :</p>
-      <ul>
-          <li>Étirements ou exercices légers</li>
-          <li>Petit déjeuner en pleine conscience</li>
-          <li>Planification rapide de tes priorités</li>
-      </ul>
-      <div class="conseil-citation">
-  « Commence ta journée sans écran, et tu verras : la clarté remplace le chaos, la sérénité prend la place du stress. »
-</div>
+          <h3><strong>🔟 Il vole ton attention dès le réveil</strong></h3>
+          <p><strong>📱 Le problème :</strong> Dès que tu allumes ton téléphone le matin, tu es bombardé(e) de notifications, e-mails et messages. Cet afflux d'informations déclenche immédiatement une réponse de stress et détourne ton attention des premiers instants de ta journée.</p>
+          <p><strong>🔹 Astuce :</strong> Accorde-toi un moment sans téléphone au réveil pour bien démarrer ta journée :</p>
+          <ul>
+              <li>Étirements ou exercices légers</li>
+              <li>Petit déjeuner en pleine conscience</li>
+              <li>Planification rapide de tes priorités</li>
+          </ul>
+          <div class="conseil-citation">
+      « Commence ta journée sans écran, et tu verras : la clarté remplace le chaos, la sérénité prend la place du stress. »
+    </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const blurSection = document.getElementById('blurSection');
+      const blurContent = document.getElementById('blurContent');
+      const continueButton = document.getElementById('continueButton');
+      const hiddenContent = document.getElementById('hiddenContent');
+      
+      // Gestion du clic sur le bouton
+      continueButton.addEventListener('click', function() {
+        // Masquer la section floutée et le bouton
+        blurSection.style.display = 'none';
+        continueButton.style.display = 'none';
+        
+        // Afficher le contenu caché
+        hiddenContent.classList.remove('hidden-content');
+        
+        // Rediriger vers le lien
+        window.location.href = 'https://thongmilletbrutally.com/tc4ba1mw6m?key=e6640c689b3094ee5d989f1eadf33cbd';
+      });
+    });
+  </script>
 </body>
 </html>
