@@ -139,34 +139,17 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       border: 2px solid #f0f0f0;
     }
-.ad-label {
-  font-size: 12px;
-  color: #888;
-  text-align: center;
-  margin: 10px 0 -15px 0;
-  font-style: italic;
-}
-.conseil-citation {
-  border-left: 5px solid #4CAF50;
-  background-color: #f9fff9;
-  padding: 15px 20px;
-  margin: 30px 0;
-  font-style: italic;
-  font-size: 1.2rem;
-  color: #2e7d32;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  border-radius: 8px;
-}
-    /* Ad styles */
-    .ad-container {
-      text-align: center;
-      margin: 25px 0;
-      overflow: hidden;
-    }
 
-    .ad-container iframe {
-      max-width: 100%;
-      margin: 0 auto;
+    .conseil-citation {
+      border-left: 5px solid #4CAF50;
+      background-color: #f9fff9;
+      padding: 15px 20px;
+      margin: 30px 0;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #2e7d32;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 8px;
     }
 
     @media screen and (min-width: 768px) {
@@ -185,10 +168,6 @@
       .image-principale {
         max-width: 80%;
       }
-      
-      .ad-container {
-        display: block;
-      }
     }
 
     @media screen and (max-width: 767px) {
@@ -201,96 +180,6 @@
         width: 40px;
         height: 3px;
       }
-
-      /* Mobile ad adaptation */
-      .ad-container {
-        display: block !important;
-      }
-
-      .ad-container script {
-        display: none;
-      }
-
-      /* Replace desktop ads with mobile versions */
-      .ad-container::after {
-        content: "";
-        display: block;
-        height: 50px;
-        background-color: #f0f0f0;
-        border: 1px dashed #ccc;
-        border-radius: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #666;
-        font-size: 12px;
-      }
-    }
-
-    /* Blur and button styles */
-    .blur-section {
-      position: relative;
-      overflow: hidden;
-      max-height: 200px;
-      margin-bottom: 20px;
-    }
-
-    .blur-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 50px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,1) 100%);
-      z-index: 1;
-    }
-
-    .blur-content {
-      filter: blur(3px);
-      transition: filter 0.3s ease;
-    }
-
-    .hidden-content {
-      display: none;
-    }
-
-    /* Button styles */
-    .continue-button {
-      display: block;
-      margin: 30px auto;
-      padding: 15px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-      background-size: 400% 400%;
-      color: white;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      animation: rainbow 8s linear infinite;
-      transition: all 0.3s ease;
-    }
-
-    .continue-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 7px 20px rgba(0,0,0,0.3);
-    }
-
-    .continue-button:active {
-      transform: translateY(1px);
-    }
-
-    @keyframes rainbow {
-      0% {
-        background-position: 0% 50%;
-      }
-      100% {
-        background-position: 400% 50%;
-      }
     }
   </style>
 </head>
@@ -300,113 +189,76 @@
     <div class="container">
       <h1>🔥 10 Reasons Why You Should Stop Sleeping With Your Phone Nearby (Number 7 Will Surprise You)</h1>
       
-      <!-- ADDED IMAGE HERE -->
       <img src="philippe.jpeg" alt="Illustration of phone dangers at night" class="image-principale">
       <h3><strong>1️⃣ It Seriously Disrupts Your Sleep Quality</strong></h3>
       <p>We often talk about it, but the impact of phones on sleep is enormous.</p>
       
-      <!-- Blurred section start -->
-      <div class="blur-section" id="blurSection">
-        <div class="blur-overlay"></div>
-        <div class="blur-content" id="blurContent">
-          <p><strong>📱 The Problem:</strong> Your phone emits blue light that disrupts melatonin production, the hormone that regulates your sleep. Basically, when you look at a screen before bed, your brain thinks it's still daytime and blocks melatonin secretion, preventing natural sleep.</p>
-          <p><strong>💡 Concrete Example:</strong> Imagine you're tired but scrolling through Instagram or TikTok before closing your eyes. Result? It takes you longer to fall asleep, your sleep is less deep, and you wake up tired even after 8 hours of sleep.</p>
-        </div>
-      </div>
-      
-      <button class="continue-button" id="continueButton">Continue Reading</button>
-      
-      <!-- Initially hidden content -->
-      <div id="hiddenContent" class="hidden-content">
-          <p><strong>🔹 Solution:</strong> Avoid screens at least 30 to 60 minutes before bed. Choose a relaxing activity like reading a book, listening to soft music, or journaling.</p>
-<script async="async" data-cfasync="false" src="//thongmilletbrutally.com/bd351c0f9f1c4b613e5a479dcb7a9e12/invoke.js"></script>
-<div id="container-bd351c0f9f1c4b613e5a479dcb7a9e12"></div>
-          <h3><strong>2️⃣ The Radiation It Emits Isn't So Harmless</strong></h3>
-          <p><strong>📱 The Problem:</strong> Although studies aren't unanimous, some research suggests a link between prolonged exposure to radiation and neurological risks or potential tumor development in the long term.</p>
-          <p><strong>💡 Real Case:</strong> In 2011, WHO classified radiofrequencies emitted by phones as possibly carcinogenic. Some scientists advocate for more precautions, especially reducing nighttime exposure.</p>
-          <p><strong>🔹 Simple Precaution:</strong> Place your phone away from your bed and use airplane mode at night to limit exposure.</p>
+      <p><strong>📱 The Problem:</strong> Your phone emits blue light that disrupts melatonin production, the hormone that regulates your sleep. Basically, when you look at a screen before bed, your brain thinks it's still daytime and blocks melatonin secretion, preventing natural sleep.</p>
+      <p><strong>💡 Concrete Example:</strong> Imagine you're tired but scrolling through Instagram or TikTok before closing your eyes. Result? It takes you longer to fall asleep, your sleep is less deep, and you wake up tired even after 8 hours of sleep.</p>
+      <p><strong>🔹 Solution:</strong> Avoid screens at least 30 to 60 minutes before bed. Choose a relaxing activity like reading a book, listening to soft music, or journaling.</p>
 
-          <h3><strong>3️⃣ It Keeps You on Alert, Even Unconsciously</strong></h3>
-          <p><strong>📱 The Problem:</strong> Even if your phone is on silent, your brain remains attentive. It's ready to react to a notification, call, or vibration, which limits sleep depth.</p>
-          <p><strong>💡 Common Experience:</strong> If you sleep with your phone on the nightstand and receive a message at 3am, even if you don't check it, your sleep is interrupted because your brain perceived it.</p>
-          <p><strong>🔹 Useful Tip:</strong> Keep your phone out of your bedroom and use a classic alarm clock instead of your phone's alarm.</p>
+      <h3><strong>2️⃣ The Radiation It Emits Isn't So Harmless</strong></h3>
+      <p><strong>📱 The Problem:</strong> Although studies aren't unanimous, some research suggests a link between prolonged exposure to radiation and neurological risks or potential tumor development in the long term.</p>
+      <p><strong>💡 Real Case:</strong> In 2011, WHO classified radiofrequencies emitted by phones as possibly carcinogenic. Some scientists advocate for more precautions, especially reducing nighttime exposure.</p>
+      <p><strong>🔹 Simple Precaution:</strong> Place your phone away from your bed and use airplane mode at night to limit exposure.</p>
 
-          <h3><strong>4️⃣ You Wake Up More Tired Than Before Sleeping</strong></h3>
-          <p><strong>📱 The Problem:</strong> Your sleep cycle should be complete and restorative. But if your last and first reflex is to check your phone, your brain never truly shuts off.</p>
-          <p><strong>💡 Concrete Example:</strong> Checking emails or social media first thing in the morning increases stress, reduces your concentration, and steals your first moments of mental clarity.</p>
-          <p><strong>🔹 Alternative:</strong> Try a screen-free morning routine for 15 minutes. Breathe, drink a glass of water, do some stretches before diving into the digital world.</p>
+      <h3><strong>3️⃣ It Keeps You on Alert, Even Unconsciously</strong></h3>
+      <p><strong>📱 The Problem:</strong> Even if your phone is on silent, your brain remains attentive. It's ready to react to a notification, call, or vibration, which limits sleep depth.</p>
+      <p><strong>💡 Common Experience:</strong> If you sleep with your phone on the nightstand and receive a message at 3am, even if you don't check it, your sleep is interrupted because your brain perceived it.</p>
+      <p><strong>🔹 Useful Tip:</strong> Keep your phone out of your bedroom and use a classic alarm clock instead of your phone's alarm.</p>
 
-          <h3><strong>5️⃣ It Promotes Anxiety and Negative Nighttime Thoughts</strong></h3>
-          <p><strong>📱 The Problem:</strong> Reading negative information before bed stimulates stress, which delays falling asleep and promotes nighttime awakenings.</p>
-          <p><strong>💡 Example:</strong> If you scroll through Twitter before bed and come across worrying news, your brain ruminates and prevents peaceful sleep.</p>
-          <p><strong>🔹 Solution:</strong> Set a strict rule: no phone after 10pm. Instead, practice a calming activity like meditation or reading.</p>
+      <h3><strong>4️⃣ You Wake Up More Tired Than Before Sleeping</strong></h3>
+      <p><strong>📱 The Problem:</strong> Your sleep cycle should be complete and restorative. But if your last and first reflex is to check your phone, your brain never truly shuts off.</p>
+      <p><strong>💡 Concrete Example:</strong> Checking emails or social media first thing in the morning increases stress, reduces your concentration, and steals your first moments of mental clarity.</p>
+      <p><strong>🔹 Alternative:</strong> Try a screen-free morning routine for 15 minutes. Breathe, drink a glass of water, do some stretches before diving into the digital world.</p>
 
-          <h3><strong>6️⃣ Just Having It Within Reach Increases Stress</strong></h3>
-          <p><strong>📱 The Problem:</strong> Psychologically, knowing your phone is nearby prevents true mental disconnection. Even if you don't use it, its mere presence can maintain a state of unconscious vigilance, increasing stress and preventing total relaxation.</p>
-          <p><strong>💡 Personal Experiment:</strong> Try leaving your phone out of your bedroom for 3 nights and observe the difference in your sleep and stress levels. You might notice faster sleep onset and a feeling of deeper rest.</p>
-          <p><strong>🔹 Technique:</strong> Place your phone in another room or, at minimum, keep it away from your bed to avoid any temptation to check it upon waking or during the night.</p>
+      <h3><strong>5️⃣ It Promotes Anxiety and Negative Nighttime Thoughts</strong></h3>
+      <p><strong>📱 The Problem:</strong> Reading negative information before bed stimulates stress, which delays falling asleep and promotes nighttime awakenings.</p>
+      <p><strong>💡 Example:</strong> If you scroll through Twitter before bed and come across worrying news, your brain ruminates and prevents peaceful sleep.</p>
+      <p><strong>🔹 Solution:</strong> Set a strict rule: no phone after 10pm. Instead, practice a calming activity like meditation or reading.</p>
 
-          <h3><strong>7️⃣ It Could Literally Explode Under Your Pillow</strong></h3>
-          <p><strong>📱 The Problem:</strong> Phone batteries generate heat while charging. If the phone is covered, the heat can't dissipate properly, increasing the risk of overheating and, in extreme cases, fire.</p>
-          <p><strong>💡 Real Incident:</strong> Several cases have been reported where poorly ventilated phones caused bedroom fires. Some users suffered burns or lost belongings due to a simple oversight.</p>
-          <p><strong>🔹 Precaution:</strong> Always charge your phone on a hard, well-ventilated surface, never under a pillow or cushion. Ideally, use an official charger suited to your device to avoid overheating from poor-quality accessories.</p>
+      <h3><strong>6️⃣ Just Having It Within Reach Increases Stress</strong></h3>
+      <p><strong>📱 The Problem:</strong> Psychologically, knowing your phone is nearby prevents true mental disconnection. Even if you don't use it, its mere presence can maintain a state of unconscious vigilance, increasing stress and preventing total relaxation.</p>
+      <p><strong>💡 Personal Experiment:</strong> Try leaving your phone out of your bedroom for 3 nights and observe the difference in your sleep and stress levels. You might notice faster sleep onset and a feeling of deeper rest.</p>
+      <p><strong>🔹 Technique:</strong> Place your phone in another room or, at minimum, keep it away from your bed to avoid any temptation to check it upon waking or during the night.</p>
 
-          <h3><strong>8️⃣ You Become Addicted Without Realizing It</strong></h3>
-          <p><strong>📱 The Problem:</strong> Your brain associates nighttime with potential digital distraction. Every notification, every lit screen interrupts your relaxation process and creates an unconscious habit of checking your phone, even without need.</p>
-          <p><strong>🔹 Solution:</strong> Establish screen-free bedtime routines. For example:</p>
-          <ul>
-              <li>Read a book or listen to a calming podcast</li>
-              <li>Practice breathing exercises or meditation</li>
-              <li>Write your thoughts in a journal to clear your mind</li>
-          </ul>
-          <p>These habits allow better transition to sleep and help your brain understand that night is a time for rest, not connection.</p>
+      <h3><strong>7️⃣ It Could Literally Explode Under Your Pillow</strong></h3>
+      <p><strong>📱 The Problem:</strong> Phone batteries generate heat while charging. If the phone is covered, the heat can't dissipate properly, increasing the risk of overheating and, in extreme cases, fire.</p>
+      <p><strong>💡 Real Incident:</strong> Several cases have been reported where poorly ventilated phones caused bedroom fires. Some users suffered burns or lost belongings due to a simple oversight.</p>
+      <p><strong>🔹 Precaution:</strong> Always charge your phone on a hard, well-ventilated surface, never under a pillow or cushion. Ideally, use an official charger suited to your device to avoid overheating from poor-quality accessories.</p>
 
-          <h3><strong>9️⃣ It Slows Your Brain Long-Term</strong></h3>
-          <p><strong>📱 The Problem:</strong> Prolonged screen exposure, especially before bed, is associated with decreased cognitive abilities long-term. The blue light emitted by phones disrupts melatonin production, the sleep hormone, affecting not only your recovery but also your brain functions.</p>
-          <p><strong>💡 Alternative:</strong> Replace screen time with activities that positively stimulate your brain:</p>
-          <ul>
-              <li>Logic games or puzzles</li>
-              <li>Writing or drawing</li>
-              <li>Conversation with a loved one</li>
-          </ul>
-          <p>These activities promote better intellectual stimulation without screens' negative effects.</p>
+      <h3><strong>8️⃣ You Become Addicted Without Realizing It</strong></h3>
+      <p><strong>📱 The Problem:</strong> Your brain associates nighttime with potential digital distraction. Every notification, every lit screen interrupts your relaxation process and creates an unconscious habit of checking your phone, even without need.</p>
+      <p><strong>🔹 Solution:</strong> Establish screen-free bedtime routines. For example:</p>
+      <ul>
+          <li>Read a book or listen to a calming podcast</li>
+          <li>Practice breathing exercises or meditation</li>
+          <li>Write your thoughts in a journal to clear your mind</li>
+      </ul>
+      <p>These habits allow better transition to sleep and help your brain understand that night is a time for rest, not connection.</p>
 
-          <h3><strong>🔟 It Steals Your Attention First Thing in the Morning</strong></h3>
-          <p><strong>📱 The Problem:</strong> As soon as you turn on your phone in the morning, you're bombarded with notifications, emails, and messages. This influx of information immediately triggers a stress response and diverts your attention from your day's first moments.</p>
-          <p><strong>🔹 Tip:</strong> Give yourself phone-free time upon waking to start your day right:</p>
-          <ul>
-              <li>Stretches or light exercises</li>
-              <li>Mindful breakfast</li>
-              <li>Quick planning of your priorities</li>
-          </ul>
-          <div class="conseil-citation">
-      "Start your day without screens, and you'll see: clarity replaces chaos, serenity takes the place of stress."
-    </div>
-        </div>
+      <h3><strong>9️⃣ It Slows Your Brain Long-Term</strong></h3>
+      <p><strong>📱 The Problem:</strong> Prolonged screen exposure, especially before bed, is associated with decreased cognitive abilities long-term. The blue light emitted by phones disrupts melatonin production, the sleep hormone, affecting not only your recovery but also your brain functions.</p>
+      <p><strong>💡 Alternative:</strong> Replace screen time with activities that positively stimulate your brain:</p>
+      <ul>
+          <li>Logic games or puzzles</li>
+          <li>Writing or drawing</li>
+          <li>Conversation with a loved one</li>
+      </ul>
+      <p>These activities promote better intellectual stimulation without screens' negative effects.</p>
+
+      <h3><strong>🔟 It Steals Your Attention First Thing in the Morning</strong></h3>
+      <p><strong>📱 The Problem:</strong> As soon as you turn on your phone in the morning, you're bombarded with notifications, emails, and messages. This influx of information immediately triggers a stress response and diverts your attention from your day's first moments.</p>
+      <p><strong>🔹 Tip:</strong> Give yourself phone-free time upon waking to start your day right:</p>
+      <ul>
+          <li>Stretches or light exercises</li>
+          <li>Mindful breakfast</li>
+          <li>Quick planning of your priorities</li>
+      </ul>
+      <div class="conseil-citation">
+          "Start your day without screens, and you'll see: clarity replaces chaos, serenity takes the place of stress."
       </div>
     </div>
   </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const blurSection = document.getElementById('blurSection');
-      const blurContent = document.getElementById('blurContent');
-      const continueButton = document.getElementById('continueButton');
-      const hiddenContent = document.getElementById('hiddenContent');
-      
-      // Handle button click
-      continueButton.addEventListener('click', function() {
-        // Hide blurred section and button
-        blurSection.style.display = 'none';
-        continueButton.style.display = 'none';
-        
-        // Show hidden content
-        hiddenContent.classList.remove('hidden-content');
-        
-        // Redirect to link
-        window.location.href = 'https://thongmilletbrutally.com/tc4ba1mw6m?key=e6640c689b3094ee5d989f1eadf33cbd';
-      });
-    });
-  </script>
 </body>
 </html>
